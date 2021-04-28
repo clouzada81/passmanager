@@ -30,7 +30,7 @@ class LoadDatabase {
             lerJSON();
 
             for (GrupoCommand grupoCommand : grupoCommandList) {
-                Grupo grupo = new Grupo(grupoCommand.getName(), grupoCommand.getId());
+                grupoRepository.save(new Grupo(grupoCommand.getName(), grupoCommand.getId()));
             }
 
             for (CredencialCommand credencialCommand : credencialCommandList) {
